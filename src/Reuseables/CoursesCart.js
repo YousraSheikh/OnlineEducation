@@ -11,7 +11,7 @@ function Stars({icons}){
 const Courses = ({image, alt, heading, description, price, StarIcon}) => {
   return (
     <>
-    <div className='relative flex flex-col border-2 h-full w-[30%] hover-blur hover:cursor-pointer hover:shadow-2xl'>
+    <div className='relative flex flex-col border-2 h-full w-[30%] mb-2 hover-blur hover:cursor-pointer hover:shadow-2xl'>
         <div className="absolute top-0 left-0 w-full h-full bg-gray-100 py-[30%] px-[10%] opacity-0 hover:opacity-100 transition-opacity">
             <p className='flex justify-center font-bold'>Make yourself upto date with new techology and stay conected  with  us.</p>
             <div className='flex flex-row justify-center p-[10px] space-x-3'>

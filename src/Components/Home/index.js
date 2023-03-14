@@ -8,13 +8,13 @@ import Footer from '../Footer'
 import Courses from './Courses'
 import PlansPricing from './PlansPricing'
 import Feedback from '../../Reuseables/Feedback'
-import Carosel from './Carosel'
+import Slider from './Slider'
 const index = () => {
   return (
     <>
-    <div className='flex flex-col gap-5'>
         <Navbar />
-        <Carosel/>
+        <Slider/>
+        <div className='flex flex-col gap-5'>
         <IconsText/>
         <Courses/>
         <Learn/>
