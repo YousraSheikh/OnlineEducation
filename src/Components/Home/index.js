@@ -12,6 +12,7 @@ import Carosel from './Carosel'
 const index = () => {
   return (
     <>
+    <div className='flex flex-col gap-5'>
         <Navbar />
         <Carosel/>
         <IconsText/>
@@ -20,6 +21,7 @@ const index = () => {
         <Training/>
         <PlansPricing/>
         <CalenderSection/>
+    </div>
         <Feedback/>
         <Footer />
     </>
