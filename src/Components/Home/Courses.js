@@ -87,6 +87,36 @@ const Courses = () => {
             );
           })}
           </div>
+          <div className='flex flex-row w-full h-[40vh] justify-between  px-[100px] mt-3 mb-3'>
+          {CourseSection.map((val,index) => {
+            return(
+            <>
+            <CoursesCart
+             image={val.img}
+             heading ={val.heading}
+             description= {val.description}
+             price={val.price}
+             StarIcon={val.starIcon}
+           />
+            </>
+            );
+          })}
+          </div>
+          <div className='flex flex-row w-full h-[40vh] justify-between  px-[100px] mt-3 mb-3'>
+          {CourseSection.map((val,index) => {
+            return(
+            <>
+            <CoursesCart
+             image={val.img}
+             heading ={val.heading}
+             description= {val.description}
+             price={val.price}
+             StarIcon={val.starIcon}
+           />
+            </>
+            );
+          })}
+          </div>
           <div className='w-full flex justify-center mt-3'>
             <GlobalButton
               styling="bg-green" title="View More"
