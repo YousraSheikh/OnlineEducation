@@ -1,8 +1,8 @@
 import React from 'react'
-import jefferson from '../../Assests/jefferson.jpeg'
-import mcqueen from '../../Assests/McQuee.jpeg'
-import football from '../../Assests/football.jpeg'
-import Allien from '../../Assests/Allien.jpeg'
+import img from '../../Assests/jefferson.jpeg'
+import img1 from '../../Assests/McQuee.jpeg'
+import img2 from '../../Assests/football.jpeg'
+import img3 from '../../Assests/Allien.jpeg'
 const Learn = () => {
   return (
     <>
@@ -10,20 +10,23 @@ const Learn = () => {
           <h2 className='text-[30px]'>Learn From Best</h2>
           <p>Our online courses are built-in partnership withtechnology leaders and are relevent to industry needs.</p>
           <p>Upon Completing An Online Course you'll recieve a verified comp-letion Certificaterecognized by industry leaders</p>
-          <div className='w-50% flex justify-center h-[100px]'>
-            <ul className='flex flex-row mt-5 mb-5 gap-x-20'>       
-              <li> <img src={jefferson} alt="brand pic"  /> </li>
-              <li> <img src={Allien} alt="brand pic" /> </li>
-              <li> <img src={football} alt="brand pic" /> </li>
-              <li> <img src={mcqueen} alt="brand pic" /> </li>
-              <li> <img src={jefferson} alt="brand pic" /> </li>
-              <li> <img src={Allien} alt="brand pic" /> </li>
-              <li> <img src={football} alt="brand pic" /> </li>
-            </ul>
+          <div className='lg:w- flex justify-center lg:h-[200px] h'>
+        <div className='flex lg:flex-row flex-col  mt-16 mb-16 lg:gap-x-20'>
+          <div className='flex flex-row'>
+           <img src={img} alt="brand pic" /> 
+            <img src={img1} alt="brand pic" /> 
+            <img src={img2} alt="brand pic" /> 
           </div>
+          <div className='flex flex-row lg:mt-0 mt-10'>
+            <img src={img3} alt="brand pic" /> 
+            <img src={img1} alt="brand pic" /> 
+            <img src={img2} alt="brand pic" /> 
+          </div>
+
+        </div>
+      </div>
         </div>
     </>
   )
 }
-
 export default Learn

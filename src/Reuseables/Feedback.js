@@ -7,7 +7,7 @@ import logo from "../Assests/logo.jpg";
 function Feedback() {
   return (
     <>
-      <OwlCarousel className="owl-theme bg-blue-500" loop margin={10} nav items={1} >
+      <OwlCarousel className="owl-theme bg-green" loop margin={10} nav items={1} >
         <div className="item flex justify-center flex-col gap-4 items-center w-full">
           <img src={logo} alt="logo" className="image mt-3" />
           <p className="w-[95%] text-center text-[17px] md:w-[700px]">
@@ -18,7 +18,7 @@ function Feedback() {
           <p className="font-bold">David Anderson</p>
         </div>
         <div className="item flex justify-center flex-col gap-4 items-center w-full ">
-          <img src={logo} alt="logo" className="image" />
+          <img src={logo} alt="logo" className="image mt-3" />
           <p className="w-[95%] text-center md:w-[700px]">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
@@ -29,7 +29,7 @@ function Feedback() {
           <p>David Anderson</p>
         </div>
         <div className="item flex justify-center flex-col gap-4 items-center w-full ">
-          <img src={logo} alt="logo" className="image" />
+          <img src={logo} alt="logo" className="image mt-3" />
           <p className="w-[95%] text-center md:w-[700px]">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text

@@ -1,61 +1,51 @@
-import React from 'react'
-import GlobalButton from '../../Reuseables/GlobalButton'
-import {FiSearch} from 'react-icons/fi'
-const btn =[
-    {
-        text: "Home",
-        styled: '',
-    },
-    {
-        text: "Features",
-        styled: '',
-    },
-    {
-        text: "Courses",
-        styled: '',
-    },
-    {
-        text: "Blogs",
-        styled: '',
-    },
-    {
-        text: "Gallery",
-        styled: '',
-    },
-    {
-        text: "Shop",
-        styled: '',
-    },
-    {
-        text: "Contact Us",
-        styled: '',
-    },
-]
-const MainNav = () => {
+import React, { useState } from "react";
+import { BsSearch } from "react-icons/bs";
+import { FaBars } from "react-icons/fa";
+import SideBar from "./Sidebar";
+
+const Navbar = () => {
+  const [toggle, setToggle] = useState(false);
+  const MenuItems = [
+    { name: "Home", url: "/" },
+    { name: "Features", url: "/courses" },
+    { name: "Courses", url: "/event" },
+    { name: "Blogs", url: "/blog" },
+    { name: "Gallery", url: "/gallery" },
+    { name: "Shop", url: "/shop" },
+    { name: "Contact", url: "/contact"  },
+  ];
   return (
     <>
-        <div className='py-[10px] px-[50px] w-full flex gap-2'>
-            <div  className='w-[20%]'>
-                <h2 className='text-[30px] font-bold italic text-white'>online Education.</h2>
-            </div>
-            <div  className='w-[80%] flex justify-end flex-row gap-2 font-bold'>
-                {btn.map((val,index)=>{
-                    return(
-                        <>
-                            <div className=''>
-                                <button className='text-[#ffffff] p-[5px] w-[100px] hover:border-2'>
-                                    {val.text}
-                                </button>
-                                
-                            </div>
-                        </>
-                    )}
-                )}
-                <FiSearch className='p-[5px] text-[40px] text-white'/>
-            </div>
+      <SideBar toggle={toggle} setToggle={setToggle} />
+      <div className="w-full h-[80px] shadow-lg flex flex-row justify-between items-center md:py-[5px]">
+        <div className="w-full md:w-[30%]">
+          <a href="/">
+            <h2 className='text-[30px] font-bold italic text-white cursor-pointer pl-[50px]'>online Education.</h2>
+          </a>
         </div>
+        <div className="w-[60%] md:block hidden border-r-[1px] pr-[10px]">
+          <ul className="flex flex-row justify-between uppercase font-semibold">
+            {MenuItems.map((val, index) => {
+              return (
+                <>
+                  <li className="cursor-pointer" key={index}>{val.name}</li>
+                </>
+              );
+            })}
+          </ul>
+        </div>
+        <div className="md:w-[10%] md:px-[50px] md:block hidden">
+          <BsSearch className="text-[20px]"/>
+        </div>
+        <div
+          className="md:hidden block pr-[15px]"
+          onClick={() => setToggle(true)}
+        >
+          <FaBars className="text-[20px]" />
+        </div>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default MainNav
+export default Navbar;

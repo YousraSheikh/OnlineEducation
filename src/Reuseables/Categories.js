@@ -79,10 +79,10 @@ const Categories = () => {
           <div className="flex flex-row gap-2">
             <GlobalButton styling="bg-[#1ebb90]" title="Computer" />
             <GlobalButton styling="bg-sky-400" title="Science" />
-            <GlobalButton styling="bg-var(Green-color)" title="Biology" />
+            <GlobalButton styling="bg-green" title="Biology" />
           </div>
           <div className="flex flex-row gap-2">
-            <GlobalButton styling="bg-sky-400" title="Uncategorized" />
+            <GlobalButton styling="bg-sky-400" title="Categorized" />
             <GlobalButton styling="bg-[#1ebb90]" title="Academy" />
             <GlobalButton styling="bg-sky-400" title="University" />
           </div>

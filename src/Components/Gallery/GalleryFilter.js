@@ -42,11 +42,15 @@ const GalleryFilter = () => {
   return (
     <>
     <div className="flex flex-wrap justify-center">
-      <div className="w-full mb-8">
+      <div className="w-full mb-8 mt-8">
         <div className="flex justify-center">
-          <button className="mr-4" onClick={() => setFilter('all')}>All</button>
-          <button className="mr-4" onClick={() => setFilter('Computer')}>Computer</button>
-          <button onClick={() => setFilter('Science')}>Science</button>
+          <button className="mr-4 border-2 w-[100px] p-[5px] bg-green font-bold text-white border-green rounded-md hover:bg-white hover:text-green hover:drop-shadow-xl" onClick={() => setFilter('all')}>
+            All
+          </button>
+          <button className="mr-4 border-2 w-[100px] bg-green font-bold text-white border-green rounded-md hover:bg-white hover:text-green hover:drop-shadow-xl " onClick={() => setFilter('Computer')}>Computer</button>
+          <button className="mr-4 border-2 w-[100px] bg-green font-bold text-white border-green rounded-md hover:bg-white hover:text-green hover:drop-shadow-xl" onClick={() => setFilter('Science')}>Science</button>
+          <button className="mr-4 border-2 w-[100px] bg-green font-bold text-white border-green rounded-md hover:bg-white hover:text-green hover:drop-shadow-xl" onClick={() => setFilter('Biology')}>Biology</button>
+          <button className="mr-4 border-2 w-[100px] bg-green font-bold text-white border-green rounded-md hover:bg-white hover:text-green hover:drop-shadow-xl" onClick={() => setFilter('History')}>History</button>        
         </div>
       </div>
       {filteredImages.map(img => (

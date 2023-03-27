@@ -6,29 +6,25 @@ const Cart = [
   {
     img : webDevelopment,
     heading: "Web Development",
-    description: "Learn web development",
     price: "100$",
-    starIcon: "4"
   },
   {
     img : graphics,
     alt: "Graphics",
     heading: "Web Development",
-    description: "Learn web development",
     price: "100$",
-    starIcon: "4"
   },
   
 ];
 const Courses = () => {
   return (
     <>
-     <div className='flex gap-y-10 flex-col'>
+     <div className='flex gap-y-5 md:gap-y-10 flex-col'>
       <div className='flex flex-row gap-5 justify-around'>
         {Cart.map((val,index) => {
             return(
             <>
-              <div className='relative flex flex-col border-2 h-full w-[30%] hover-blur hover:cursor-pointer hover:shadow-2xl'>
+              <div className='relative flex flex-col border-2 h-full w-[40%] hover-blur hover:cursor-pointer hover:shadow-2xl'>
                 <img src={val.img} alt={val.alt} className='w-full h-[95%]'/>
                 <div className='flex flex-col ml-3 h-[5%] bottom-2'>
                   <h2  className='font-bold text-[20px]'>{val.heading}</h2>
@@ -46,7 +42,7 @@ const Courses = () => {
               {Cart.map((val,index) => {
             return(
             <>
-      <div className='relative flex flex-col border-2 h-full w-[30%] hover-blur hover:cursor-pointer hover:shadow-2xl'>
+      <div className='relative flex flex-col border-2 h-full w-[40%] hover-blur hover:cursor-pointer hover:shadow-2xl'>
         <img src={val.img} alt={val.alt} className='w-full h-[70%]'/>
         <div className='flex flex-col ml-3 h-[30%]'>
             <h2  className='font-bold text-[20px]'>{val.heading}</h2>
@@ -67,7 +63,7 @@ const Courses = () => {
               {Cart.map((val,index) => {
             return(
             <>
-      <div className='relative flex flex-col border-2 h-full w-[30%] hover-blur hover:cursor-pointer hover:shadow-2xl'>
+      <div className='relative flex flex-col border-2 h-full w-[40%] hover-blur hover:cursor-pointer hover:shadow-2xl'>
         <img src={val.img} alt={val.alt} className='w-full h-[70%]'/>
         <div className='flex flex-col ml-3 h-[30%]'>
             <h2  className='font-bold text-[20px]'>{val.heading}</h2>
@@ -85,7 +81,7 @@ const Courses = () => {
           })}
           </div>
     </div> 
-    <div className='w-full flex justify-center py-[5px]'>
+    <div className='w-full flex justify-center py-[5px] mt-5'>
             <GlobalButton
               styling="bg-green" title="View More"
             />

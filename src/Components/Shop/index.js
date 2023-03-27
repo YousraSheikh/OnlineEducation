@@ -9,9 +9,9 @@ const index = () => {
     <>
         <Navbar/>
         <div>
-            <div className='flex flex-row gap-10 p-[30px]'>
-            <div className='w-[75%] bg-gray-100'><Shop/></div>
-            <div className='w-[25%] bg-gray-100'><Categories/></div>
+            <div className='flex flex-col md:flex-row gap-10 p-[30px]'>
+            <div className='w-[100%] lg:w-[75%] bg-gray-100'><Shop/></div>
+            <div className='w-[100%] lg:w-[25%] bg-gray-100'><Categories/></div>
         </div>
         <Feedback/>
         <Footer/>
