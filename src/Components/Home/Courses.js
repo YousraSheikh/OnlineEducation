@@ -1,19 +1,18 @@
 import React from 'react'
-import CoursesCart from '../../Reuseables/CoursesCart'
-import webDevelopment from '../../Assests/web-development.jpg'
+import {AiFillStar} from 'react-icons/ai'
 import graphics from '../../Assests/graphic-design.jpg'
 import seo from '../../Assests/SEO.png'
 import digitalMarketing from '../../Assests/digitalMarket.png'
 import cloudcomputing from '../../Assests/cloudcomputing.jpg'
 import GlobalButton from '../../Reuseables/GlobalButton'
+function Stars({starIcon}){
+  const stars=[];
+  for(let i=0; i < starIcon; i++){
+      stars.push(<AiFillStar key={i}/>);
+  }
+  return <>{stars}</>;
+  }
 const Cart = [
-  {
-    img : webDevelopment,
-    heading: "Web Development",
-    description: "Learn web development",
-    price: "100$",
-    starIcon: "4"
-  },
   {
     img : graphics,
     heading: "Web Development",
@@ -21,15 +20,6 @@ const Cart = [
     price: "100$",
     starIcon: "4"
   },
-  {
-    img : seo,
-    heading: "Web Development",
-    description: "Learn web development",
-    price: "100$",
-    starIcon: "4"
-  },  
-];
-const CourseSection = [
   {
     img : digitalMarketing,
     heading: "Web Development",
@@ -57,63 +47,36 @@ const Courses = () => {
     <>
         <div className='flex flex-col py-[10px] px-[25px] mt-3'>
           <h2 className='text-[28px] font-bold flex justify-center'>Online Courses Started Soon</h2>
-          <div className='flex flex-row gap-3 w-full h-[40vh] justify-between px-[100px] mt-3 mb-3'>
-          {Cart.map((val,index) => {
-            return(
-            <>
-            <CoursesCart
-             image={val.img}
-             heading ={val.heading}
-             description= {val.description}
-             price={val.price}
-             StarIcon={val.starIcon}
-           />
-            </>
-            );
-          })}
-          </div>
-          <div className='flex flex-row w-full h-[40vh] justify-between  px-[100px] mt-3 mb-3'>
-          {CourseSection.map((val,index) => {
-            return(
-            <>
-            <CoursesCart
-             image={val.img}
-             heading ={val.heading}
-             description= {val.description}
-             price={val.price}
-             StarIcon={val.starIcon}
-           />
-            </>
-            );
-          })}
-          </div>
-          <div className='flex flex-row w-full h-[40vh] justify-between  px-[100px] mt-3 mb-3'>
-          {CourseSection.map((val,index) => {
-            return(
-            <>
-            <CoursesCart
-             image={val.img}
-             heading ={val.heading}
-             description= {val.description}
-             price={val.price}
-             StarIcon={val.starIcon}
-           />
-            </>
-            );
-          })}
-          </div>
-          <div className='flex flex-row w-full h-[40vh] justify-between  px-[100px] mt-3 mb-3'>
-          {CourseSection.map((val,index) => {
-            return(
-            <>
-            <CoursesCart
-             image={val.img}
-             heading ={val.heading}
-             description= {val.description}
-             price={val.price}
-             StarIcon={val.starIcon}
-           />
-            </>
+          <div className='w-full flex flex-col px-[10px] justify-center gap-10 md:flex-row items-center'>
+          {Cart.slice(0, 4).map((val) => {
+            return (
+              <>
+                <div
+                  className="mt-2 w-full md:w-1/5 border-2 drop-shadow-xl hover:cursor-pointer mb-2 flex flex-col rounded-lg"
+                >
+                  <div className="w-full">
+                    <img
+                      src={val.img}
+                      alt="Course_Pic"
+                      className=" border w-full rounded-lg md:h-[230px] h-[200px]"
+                    />
+                  </div>
+                  <div className="gap-2 px-[16px] h-[150px] flex flex-col py-[20px]">
+                    <h2 className="text-[18px] font-bold mt-2">{val.heading}</h2>
+                    <p>{val.description}</p>
+                    <p className="font-bold">
+                      {val.price}
+                    </p>
+                      <div className="flex flex-row items-center bg-green-500 text-[#ffd700]">
+                        <Stars starIcon={val.starIcon}
+                        />
+                        <p className="text-[#ffd700] flex flex-row items-center text-[18px] ">
+                        
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </>
             );
           })}
           </div>
