@@ -6,9 +6,9 @@ const Training = () => {
   return (
     <>
         <div className='w-full flex flex-row py-[10px] px-[50px] mt-3 mb-3 border-b-2'>
-            <div className='w-[100%] md:w-[40%] flex flex-col ml-[20px]'>
+            <div className='w-[100%] md:w-[40%] flex flex-col md:ml-[20px]'>
                 <BsCameraVideo className='text-[50px] text-blue-500'/>
-                <h2 className='text-[30px] font-semibold'>Our Video Training for Microsoft products and technologies</h2>
+                <h2 className='text-[25px] md:text-[30px] font-semibold'>Our Video Training for Microsoft products and technologies</h2>
                 <div className='flex flex-row justify-between my-[10px]'>
                     <div>Posted March 23 2022</div>
                     <div className='border-r-2 border-black'></div>

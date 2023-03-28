@@ -15,31 +15,31 @@ function Stars({starIcon}){
 const Cart = [
   {
     img : graphics,
-    heading: "Web Development",
-    description: "Learn web development",
+    heading: "Graphic Desiging",
+    description: "Learn about Graphics",
     price: "100$",
     starIcon: "4"
   },
   {
     img : digitalMarketing,
-    heading: "Web Development",
-    description: "Learn web development",
+    heading: "Digital Market",
+    description: "Learn Digital Market",
     price: "100$",
-    starIcon: "4"
+    starIcon: "5"
   },
   {
     img : cloudcomputing,
-    heading: "Web Development",
-    description: "Learn web development",
+    heading: "Cloud Computing",
+    description: "Learn Cloud Computing",
     price: "100$",
-    starIcon: "4"
+    starIcon: "2"
   },
   {
     img : seo,
-    heading: "Web Development",
-    description: "Learn web development",
+    heading: "SEO",
+    description: "Search Engine Optimization ",
     price: "100$",
-    starIcon: "4"
+    starIcon: "3"
   },  
 ];
 const Courses = () => {

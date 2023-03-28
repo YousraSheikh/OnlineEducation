@@ -22,17 +22,17 @@ const Cart = [
   },
   {
     img : graphics,
-    heading: "Web Development",
-    description: "Learn web development",
-    price: "100$",
-    starIcon: "4"
+    heading: "Graphics Desiging",
+    description: "Learn about graphics",
+    price: "150$",
+    starIcon: "5"
   },
   {
     img : seo,
-    heading: "Web Development",
-    description: "Learn web development",
-    price: "100$",
-    starIcon: "4"
+    heading: "SEO",
+    description: "Search Engine Optimization",
+    price: "50$",
+    starIcon: "3"
   },  
 ];
 const Courses = () => {
