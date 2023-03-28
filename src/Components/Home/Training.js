@@ -1,7 +1,6 @@
 import React from 'react'
 import {BsCameraVideo} from 'react-icons/bs'
 import screen from '../../Assests/screen.jpg'
-import GlobalButton from '../../Reuseables/GlobalButton'
 const Training = () => {
   return (
     <>

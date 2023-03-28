@@ -11,7 +11,7 @@ const SideBar = ({ toggle, setToggle }) => {
     { name: "Blogs", url: "/blog" },
     { name: "Gallery", url: "/gallery" },
     { name: "Shop", url: "/shop" },
-    { name: "Contact Us" },
+    { name: "Contact Us", url:"/Contact-Us" },
   ];
   return (
     <div>

@@ -1,6 +1,5 @@
 import React from 'react'
 import {AiFillStar} from 'react-icons/ai'
-import CoursesCart from '../../Reuseables/CoursesCart'
 import webDevelopment from '../../Assests/web-development.jpg'
 import graphics from '../../Assests/graphic-design.jpg'
 import seo from '../../Assests/SEO.png'

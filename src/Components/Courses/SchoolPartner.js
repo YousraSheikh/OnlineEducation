@@ -7,7 +7,7 @@ const Learn = () => {
   return (
     <>
         <div className='py-[5px] px-[50px] flex flex-col items-center border-b-2'>
-          <h2 className='text-[30px]'>Learn From Best</h2>
+          <h2 className='text-[30px]'>School Partnership</h2>
           <p>Our online courses are built-in partnership withtechnology leaders and are relevent to industry needs.</p>
           <p>Upon Completing An Online Course you'll recieve a verified comp-letion Certificaterecognized by industry leaders</p>
           <div className='w-50% flex justify-center h-[100px]'>

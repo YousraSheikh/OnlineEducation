@@ -13,7 +13,7 @@ const Navbar = () => {
     { name: "Blogs", url: "/blog" },
     { name: "Gallery", url: "/gallery" },
     { name: "Shop", url: "/shop" },
-    { name: "Contact", url: "/contact"  },
+    { name: "Contact", url: "/Contact-Us"  },
   ];
   return (
     <>
