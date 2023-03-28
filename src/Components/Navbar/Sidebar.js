@@ -1,16 +1,16 @@
 import { Drawer } from "@mui/material";
 import * as React from "react";
 import { FaTimes } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 const SideBar = ({ toggle, setToggle }) => {
   const MenuItems = [
     // { name: "Home" },
-    { name: "Home", url: "/about" },
-    { name: "Courses" },
-    { name: "Features" },
-    { name: "Blogs" },
-    { name: "Gallery" },
-    { name: "Shop" },
+    { name: "Home", url: "/" },
+    { name: "Courses", url: "/courses" },
+    { name: "Features", url:  "/feature" },
+    { name: "Blogs", url: "/blog" },
+    { name: "Gallery", url: "/gallery" },
+    { name: "Shop", url: "/shop" },
     { name: "Contact Us" },
   ];
   return (
@@ -24,7 +24,10 @@ const SideBar = ({ toggle, setToggle }) => {
             {MenuItems.map((val, index) => {
               return (
                 <>
-                  <li key={index} className="text-[20px]">{val.name}</li>
+                  <li key={index} className="cursor-pointer text-[20px]">
+                    <Link to={val.url}>{val.name}</Link>
+                  </li>
+                  
                 </>
               );
             })}

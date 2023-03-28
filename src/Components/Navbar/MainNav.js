@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import { BsSearch } from "react-icons/bs";
 import { FaBars } from "react-icons/fa";
 import SideBar from "./Sidebar";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const MenuItems = [
     { name: "Home", url: "/" },
-    { name: "Features", url: "/courses" },
-    { name: "Courses", url: "/event" },
+    { name: "Features", url: "/feature" },
+    { name: "Courses", url: "/courses" },
     { name: "Blogs", url: "/blog" },
     { name: "Gallery", url: "/gallery" },
     { name: "Shop", url: "/shop" },
@@ -28,7 +29,10 @@ const Navbar = () => {
             {MenuItems.map((val, index) => {
               return (
                 <>
-                  <li className="cursor-pointer" key={index}>{val.name}</li>
+                <li  className="cursor-pointer" key={index}>
+                  <Link to={val.url}>{val.name}</Link>
+                </li>
+                  
                 </>
               );
             })}
