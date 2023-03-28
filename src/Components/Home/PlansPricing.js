@@ -1,45 +1,33 @@
 import React from 'react'
-const plan = [
-    {
-        heading :  "Trial",
-        Price : "clock" ,
-        text: "Free! 30 Days",
-        button:"I WANT THIS PLAN"
-    },
-    {
-      heading :  "Monthly",
-      Price : "$89/month" ,
-      text: "Save $50 every year by comparing plan by year",
-      button:"I WANT THIS PLAN"
-  },
-  {
-    heading :  "Yearly",
-    Price : "$1000/year" ,
-    text: "Save $50 every year by comparing plan by year",
-    button:"I WANT THIS PLAN",
-    btnStyle: ""
-},
-];
+const colors = ["bg-blue-200", "bg-sky-100", "bg-green-200"];
+const Card = ({ color, title, description, text, btn }) => (
+  <div className={`flex flex-col gap-2 p-4 rounded-md shadow-md ${color}`}>
+    <h3 className="text-lg font-bold  text-center  border-b-2 p-3">{title}</h3>
+    <p className="my-2">{description}</p>
+    <p className="text-sm text-gray-600">{text}</p>
+    <button className='border bg-sky-300 rounded-md p-3 w-1/2'>{btn}</button>
+  </div>
+);
 const PlansPricing = () => {
   return (
     <>
-        <div className='flex flex-col gap-4 py-[10px] px-[50px] mt-3 bg-gray-200'>
-          <h2 className='text-[28px] font-bold flex justify-center'>Plan and Pricing</h2>
-          <div className='flex flex-row justify-between px-[50px] w-full'>
-            {plan.map((val,index)=>{
-                return(
-                    <>
-                        <div className=' border-2 border-black px-[30px] py-[20px] flex gap-2 flex-col bg-sky-200 w-1/4 rounded-md'>
-                            <h2  className='text-[25px] font-bold border-b-2 border-black h-1/5'>{val.heading}</h2>
-                            <p className='flex justify-center py-[2px] text-[23px] h-1/5'>{val.Price}</p>
-                            <p className='text-[20px] h-2/5'>{val.text}</p>
-                            <button className="flex justify-center border bg-sky-400 border-black p-[5px] rounded-md h-1/5 ">{val.button}</button>
-                        </div>
-                    </>
-                )
-            })}
-          </div>    
-        </div>
+    <div className="bg-gray-100 w-full">
+    <h2 className='text-[30px] text-center p-5'>Plans and Pricing</h2>
+    <div className="mx-20  ">
+      <div className="flex flex-col lg:flex-row gap-10 md:mb-5">
+        {colors.map((color, index) => (
+          <Card
+            key={index}
+            color={color}
+            title={`Card ${index + 1}`}
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            text="Some additional text."
+            btn ="I want this plan"
+          />
+        ))}
+      </div>
+    </div>
+  </div>
     </>
   )
 }
